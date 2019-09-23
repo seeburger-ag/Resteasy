@@ -8,7 +8,7 @@
     </description>
     <groupId>org.jboss.resteasy</groupId>
     <artifactId>resteasy-jaxrs-all</artifactId>
-    <version>3.0.7.Final</version>
+    <version>3.0.7.SEE1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
@@ -46,17 +46,22 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/resteasy/Resteasy.git</connection>
-        <developerConnection>scm:git:git@github.com:resteasy/Resteasy.git</developerConnection>
-        <url>http://github.com/resteasy/Resteasy/tree/master/</url>
+        <connection>scm:git:git://github.com/seeburger-ag/Resteasy.git</connection>
+        <developerConnection>scm:git:git@github.com:seeburger-ag/Resteasy.git</developerConnection>
+        <url>http://github.com/seeburger-ag/Resteasy/tree/master/</url>
     </scm>
 
     <distributionManagement>
         <repository>
             <id>jboss-releases-repository</id>
             <name>JBoss Releases Repository</name>
-            <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+            <url>https://repo.seeburger.de/repository/release/</url>
         </repository>
+        <snapshotRepository>
+            <id>jboss-snapshots-repository</id>
+            <name>JBoss Snapshots Repository</name>
+            <url>https://repo.seeburger.de/repository/snapshot/</url>
+        </snapshotRepository>
     </distributionManagement>
 
     <issueManagement>
@@ -116,12 +121,12 @@
         <module>resteasy-cdi</module>
         <module>resteasy-servlet-initializer</module>
         <module>server-adapters</module>
-        <module>war-tests</module>
+        <!-- <module>war-tests</module> -->
         <!-- <module>as8-integration-testing/ejb-singleton-test</module> -->
         <module>async-http-servlet-3.0</module>
-        <module>examples</module>
-        <module>jboss-modules</module>
-        <module>profiling-tests</module>
+        <!-- <module>examples</module> -->
+        <!-- <module>jboss-modules</module> -->
+        <!-- <module>profiling-tests</module> -->
         <!-- <module>arquillian</module> -->
         <!-- <module>as7-integration-testing/modules-test</module> -->
     </modules>

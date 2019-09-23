@@ -3,7 +3,7 @@
     <parent>
         <groupId>org.jboss.resteasy</groupId>
         <artifactId>resteasy-jaxrs-all</artifactId>
-        <version>3.0.7.Final</version>
+        <version>3.0.7.SEE1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <name>Resteasy Security</name>
@@ -20,10 +20,10 @@
         <module>jose-jwt</module>
         <module>login-module-authenticator</module>
         <module>skeleton-key-idm</module>
+        <!--
         <module>keystone/keystone-core</module>
         <module>keystone/keystone-as7</module>
         <module>keystone/keystone-as7-modules</module>
-        <!--
         <module>skeleton-keystone-idm/example/skeleton-key-server</module>
         <module>skeleton-keystone-idm/example/some-app</module>
         -->
