@@ -59,13 +59,27 @@ public abstract class Logger
    {
       try
       {
-         return Thread.currentThread().getContextClassLoader().loadClass(className) != null;
+         return Logger.class.getClassLoader().loadClass(className) != null;
       }
       catch (ClassNotFoundException e)
       {
+         if (Thread.currentThread().getContextClassLoader()!=null)
+         {
+            try
+            {
+               return Thread.currentThread().getContextClassLoader().loadClass(className) != null;
+            }
+            catch (Exception err)
+            {
+               // fall through
+            }
+            catch (LinkageError err)
+            {
+               // fall through
+            }
+         }
          return false;
       }
-
    }
 
    static
